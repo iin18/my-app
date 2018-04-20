@@ -17,6 +17,7 @@ import { Joke } from './joke.component';
 
     template: `
     <jokeA *ngFor="let j of jokes" [jokeO]="j"></jokeA>
+    <app-joke-form></app-joke-form>
     `
 })
 

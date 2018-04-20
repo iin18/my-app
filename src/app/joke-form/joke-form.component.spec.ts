@@ -8,7 +8,9 @@ describe('JokeFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JokeFormComponent ]
+      declarations: [ 
+        JokeFormComponent 
+      ]
     })
     .compileComponents();
   }));
@@ -21,5 +23,9 @@ describe('JokeFormComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should say hello', () => {
+    expect(component.sayHello()).toEqual('hello');
   });
 });

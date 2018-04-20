@@ -5,6 +5,7 @@ import { Joke } from '../joke/joke.component';
   selector: 'app-joke-form',
   templateUrl: './joke-form.component.html',
   styleUrls: ['./joke-form.component.css']
+
 })
 export class JokeFormComponent implements OnInit {
   @Output() jokeCreated = new EventEmitter();
@@ -18,6 +19,13 @@ export class JokeFormComponent implements OnInit {
   {
     //this.jokeCreated.emit(new Joke('A setup', 'A punchline'));
     this.jokeCreated.emit(new Joke(setup, punchline));
+  }
+
+  sayHello()
+  {
+    //this.jokeCreated.emit(new Joke('A setup', 'A punchline'));
+    return 'hjun';
+    
   }
 
   

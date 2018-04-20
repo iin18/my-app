@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 export class Joke {
@@ -15,6 +15,7 @@ export class Joke {
   toggle() {
       this.hide = !this.hide;
   }
+
 }
 
 @Component({
@@ -23,7 +24,12 @@ export class Joke {
   styleUrls: ['./joke.component.css']
 })
 export class JokeComponent implements OnInit {
-  @Input() joke: Object;
+  //@Input() joke: Object;
+  //@Output() jokeDeleted = new EventEmitter();
+
+  @Input() joke: Joke;
+  @Output() jokeDeleted = new EventEmitter<Joke>();
+
   id: number;
 
   constructor(private route: ActivatedRoute) { 
@@ -34,6 +40,11 @@ export class JokeComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  deleteJoke()
+  {
+    this.jokeDeleted.emit(this.joke);
   }
 
 }

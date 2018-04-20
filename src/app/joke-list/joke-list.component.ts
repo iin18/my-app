@@ -36,6 +36,16 @@ export class JokeListComponent implements OnInit {
     this.jokes.unshift(joke);
   }
 
+  deleteJoke(joke)
+  {
+    //Remove the joke instance from the jokes array
+    const indexTodelete = this.jokes.indexOf(joke);
+    if(indexTodelete !== -1)
+    {
+      this.jokes.splice(indexTodelete,1)
+    }
+  }
+
 
   ngOnInit() {
   }

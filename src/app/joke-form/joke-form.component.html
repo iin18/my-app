@@ -1,3 +1,22 @@
 <p>
   joke-form works!
 </p>
+<div class="card bg-light mb-3" style="width: 640px;">
+  <div class="card-body">
+    <div class="card-title">
+      <h2>Create a Joke</h2>
+    </div>
+    <div class="form-group">
+      <label for="inputSetup">Setup</label>
+      <input type="text" class="form-control" id="exampleInputSetup1" aria-describedby="setupHelp" placeholder="Enter setup" #setup>
+      <small id="setupHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="inputPunchline">Punchline</label>
+      <input type="text" class="form-control" id="exampleInputPunchline1" placeholder="Enter Punchline" #punchline>
+    </div>
+    <button (click)="createJoke(setup.value, punchline.value)" type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+    
+

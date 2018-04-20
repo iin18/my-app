@@ -32,6 +32,11 @@ export class JokeListComponent implements OnInit {
       ];
   }
 
+  addJoke(joke){
+    this.jokes.unshift(joke);
+  }
+
+
   ngOnInit() {
   }
 

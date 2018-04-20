@@ -21,8 +21,15 @@ const appRoutes: Routes=[
     path: 'joke-list', redirectTo: 'jokes'
   },
   {
+    path: 'joke/:id', component: JokeComponent
+  },
+  {
     path: '**', component: PageNotfoundComponent
   },
+  
+  // {
+  //   path: 'joke/foo', component: FooComponent
+  // },
  
 ];
 //JokeComponent1,
